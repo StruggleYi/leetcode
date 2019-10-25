@@ -4,7 +4,7 @@
  * description 两个倒序的数字相加, 数字由链表构成
  **/
 
-public class Question2 {
+public class Question002 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int k = 0;
         ListNode pre = null;
@@ -35,7 +35,7 @@ public class Question2 {
     }
 
     public static void main(String[] args) {
-        Question2 q = new Question2();
+        Question002 q = new Question002();
         ListNode a = new ListNode(8);
         ListNode b = new ListNode(9);
         ListNode c = new ListNode(9);
