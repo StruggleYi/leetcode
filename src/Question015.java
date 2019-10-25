@@ -7,7 +7,7 @@ import java.util.List;
  * @date Created in 11:03 2019/10/23
  * description 3Sum  找出数组中和为0的三个数
  **/
-public class Question15 {
+public class Question015 {
 
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
@@ -45,7 +45,7 @@ public class Question15 {
     }
 
     public static void main(String[] args) {
-        Question15 q = new Question15();
+        Question015 q = new Question015();
         int[] nums = {-2, 0, 0, 2, 2};
         List<List<Integer>> lists = q.threeSum(nums);
         for (List<Integer> list : lists) {

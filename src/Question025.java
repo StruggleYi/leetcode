@@ -3,7 +3,7 @@
  * @date Created in 16:04 2019/10/23
  * description   Reverse Nodes in k-Group  链表中每k个节点进行翻转, 空间复杂度o(1)
  **/
-public class Question25 {
+public class Question025 {
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) {
             return null;
@@ -42,7 +42,7 @@ public class Question25 {
     }
 
     public static void main(String[] args) {
-        Question25 q = new Question25();
+        Question025 q = new Question025();
         ListNode a = new ListNode(1);
         ListNode b = new ListNode(2);
         ListNode c = new ListNode(3);

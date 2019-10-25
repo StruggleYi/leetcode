@@ -3,7 +3,7 @@
  * @date Created in 16:14 2019/10/21
  * description 字符串最长不重复子串的长度
  **/
-public class Question3 {
+public class Question003 {
     /**
      * nums 记录字符串出现的位置, i,j分别指向当前子字符串的头和尾的位置
      */
@@ -21,7 +21,7 @@ public class Question3 {
     }
 
     public static void main(String[] args) {
-        Question3 q = new Question3();
+        Question003 q = new Question003();
         String s = " ";
         System.out.println(q.lengthOfLongestSubstring(s));
     }

@@ -3,7 +3,7 @@
  * @date Created in 14:54 2019/10/21
  * description : 数组去重, 空间复杂度 o(1)
  **/
-public class Question26 {
+public class Question026 {
     public int removeDuplicates(int[] nums) {
         int i = 0, j = i + 1;
         while (j < nums.length) {
@@ -17,7 +17,7 @@ public class Question26 {
     }
 
     public static void main(String[] args) {
-        Question26 q = new Question26();
+        Question026 q = new Question026();
         int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         System.out.println(q.removeDuplicates(nums));
     }

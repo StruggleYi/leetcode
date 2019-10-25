@@ -4,7 +4,7 @@
  * description  Container With Most Water
  * 给定一个数组a1,a2.... 分别表示坐标(i,ai),求两个坐标中能装水的最大值
  **/
-public class Question11 {
+public class Question011 {
     public int maxArea(int[] height) {
         int max = 0;
         int i = 0, j = height.length - 1;
@@ -21,7 +21,7 @@ public class Question11 {
     }
 
     public static void main(String[] args) {
-        Question11 q = new Question11();
+        Question011 q = new Question011();
         int[] nums = {1, 8, 6, 2, 5, 4, 8, 3, 7};
         System.out.println(q.maxArea(nums));
     }

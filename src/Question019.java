@@ -3,7 +3,7 @@
  * @date Created in 15:50 2019/10/23
  * description  Remove Nth Node From End of List  移除链表中倒数第n个节点
  **/
-public class Question19 {
+public class Question019 {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode p = new ListNode(0);
@@ -27,7 +27,7 @@ public class Question19 {
     }
 
     public static void main(String[] args) {
-        Question19 q = new Question19();
+        Question019 q = new Question019();
         ListNode head = new ListNode(1);
         ListNode a = new ListNode(2);
         ListNode b = new ListNode(3);

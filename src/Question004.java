@@ -3,7 +3,7 @@
  * @date Created in 9:31 2019/10/22
  * description 寻找两个有序数组的中位数, 时间复杂度o(log(m+n))
  **/
-public class Question4 {
+public class Question004 {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
@@ -61,7 +61,7 @@ public class Question4 {
     }
 
     public static void main(String[] args) {
-        Question4 q = new Question4();
+        Question004 q = new Question004();
 
         int[] nums1 = {1, 2};
         int[] nums2 = {3, 4};

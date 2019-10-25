@@ -3,7 +3,7 @@
  * @date Created in 8:54 2019/10/23
  * description    Merge k Sorted Lists   合并K个链表
  **/
-public class Question23 {
+public class Question023 {
 
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) {
@@ -47,7 +47,7 @@ public class Question23 {
     }
 
     public static void main(String[] args) {
-        Question23 q = new Question23();
+        Question023 q = new Question023();
         ListNode a = new ListNode(1);
         ListNode b = new ListNode(4);
         ListNode c = new ListNode(5);

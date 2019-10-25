@@ -3,7 +3,7 @@
  * @date Created in 10:47 2019/10/22
  * description 求给定字符串s 的最长回文子串
  **/
-public class Question5 {
+public class Question005 {
 
     public String longestPalindrome(String s) {
         int length = s.length();
@@ -46,7 +46,7 @@ public class Question5 {
     }
 
     public static void main(String[] args) {
-        Question5 q = new Question5();
+        Question005 q = new Question005();
 
         String s = "cbbd";
         System.out.println(q.longestPalindrome(s));

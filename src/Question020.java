@@ -5,7 +5,7 @@
  * description : 符号匹配
  **/
 
-public class Question20 {
+public class Question020 {
     private static boolean isValid(String s){
         int i = 0;
         StringBuilder sb = new StringBuilder();
