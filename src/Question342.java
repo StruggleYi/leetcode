@@ -2,6 +2,8 @@
  * @author Struggle
  * @date Created in 16:49 2019/10/31
  * description Power of Four 判断数字k是否是4的指数倍, 不使用递归或者循环
+ * path: https://leetcode.com/problems/power-of-four/description/
+ * level: easy
  **/
 public class Question342 {
 
