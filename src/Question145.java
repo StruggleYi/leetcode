@@ -14,7 +14,6 @@ public class Question145 {
      * 递归做法
      */
     List<Integer> list1 = new ArrayList<>();
-
     public List<Integer> postorderTraversal2(TreeNode root) {
         postOrder(root);
         return list1;
