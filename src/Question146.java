@@ -17,8 +17,6 @@ public class Question146 {
     private Node head, tail;
     /**
      * 在线测试的时候去掉 void
-     * note: map可以保证o(1)的时间复杂度, 但是在保证顺序的过程中也要实现o(1)的时间复杂度, 在这里使用一个双向链表来维持进出的顺序
-     *       如果使用List, 时间复杂度为o(n)
      */
     public void LRUCache(int capacity) {
         k = capacity;
