@@ -2,6 +2,7 @@
  * @author Struggle
  * @date Created in 14:50 2019/11/26
  * description Decode Ways 给定一个数字字符串, 其中字母A-Z分别对应数字1-26, 输出数字字符串可能对应的不同字母串的个数. (有多少种字母的字符串可以转化为该数字字符串)
+ * note: 使用dp[i] 记录当前到第i个字符能够解码的个数即可.
  * path: https://leetcode.com/problems/decode-ways/description/
  * level: medium
  **/
