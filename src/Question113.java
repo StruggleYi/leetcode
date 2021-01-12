@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * @author Struggle
@@ -16,19 +15,9 @@ public class Question113 {
         }
 
         List<List<Integer>> lists = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
-        Stack<TreeNode> stack = new Stack<>();
-        int k = 0;
-        while (root != null || !stack.isEmpty()){
-            while (root != null){
-                list.add(root.val);
-                k += root.val;
-                stack.add(root);
-                root = root.left;
-            }
 
 
-        }
+
         return lists;
     }
 
