@@ -1,4 +1,4 @@
-package questionafter1000;
+package questionAfter1000;
 
 /**
  * @author Struggle
