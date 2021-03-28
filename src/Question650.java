@@ -10,6 +10,12 @@ import java.util.List;
  * level: medium
  **/
 public class Question650 {
+
+    /**
+     * 为了方便理解，在此没有对代码做进一步的简化，可以将累加的操作直接放在计算整除的数字里面，但是不方便理解所以没有将其合并，在此备注一下
+     * @param n
+     * @return
+     */
     public int minSteps(int n) {
         int sum = 0;
 
