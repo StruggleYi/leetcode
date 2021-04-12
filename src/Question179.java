@@ -9,7 +9,7 @@
 public class Question179 {
 
     /**
-     * leetcode 借鉴写法 手写快排
+     * leetcode 借鉴写法 手写快排, 可以重写compareTo方法或者Comparator进行排序, 但是执行时间更多一点
      * @param nums
      * @return
      */
