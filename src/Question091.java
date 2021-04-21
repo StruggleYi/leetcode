@@ -26,14 +26,13 @@ public class Question091 {
         // 所以i 表示第i 个元素, 所以两个数组相隔1位
         int i = 1;
         while (i < s.length()) {
-            // 00 表示不存在解码的情况
             if (chars[i - 1] == '0' && chars[i] == '0') {
                 return 0;
             }
             // 01-09 则表示与i 指向0的值相同
             // eg: ...101 则与...10的个数相同
             else if (chars[i - 1] == '0') {
-                res[i + 1] = res[i - 1];
+                res[i + 1] = res[i];
             }
             // 20、30 ... 90 表示不存在解码情况
             else if (chars[i] == '0' && chars[i - 1] > '2') {
@@ -60,7 +59,7 @@ public class Question091 {
 
     public static void main(String[] args) {
         Question091 q = new Question091();
-        String s = "231";
+        String s = "2101";
         System.out.println(q.numDecodings(s));
     }
 }
