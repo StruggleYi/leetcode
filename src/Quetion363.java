@@ -2,15 +2,16 @@
  * @author Struggle
  * @date Created in 23:26 2021/4/22
  * description 矩形区域不超过 K 的最大数值和
- * node:
+ * node: 通过固定左边界, 累计计算右边界的值, 矩形的和变换成行和的数组, 通过判断数组中最大连续和的值来求得不超过k的最大值
  * path: https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
- *       https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/
+ * https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/
  * level: hard
  **/
 public class Quetion363 {
 
     /**
      * leetCode 借鉴思路
+     *
      * @param matrix
      * @param k
      * @return
@@ -28,6 +29,7 @@ public class Quetion363 {
                 for (int i = 0; i < rows; i++) {
                     rowSum[i] += matrix[i][r];
                 }
+                // dpmax求最大连续子串和不超过k的最大值
                 max = Math.max(max, dpmax(rowSum, k));
                 // 尽量提前
                 if (max == k) {
@@ -71,6 +73,33 @@ public class Quetion363 {
         }
         return max;
     }
+
+
+    /**
+     * 原始思路, 暴力破解
+     *
+     * @param matrix
+     * @param k
+     * @return
+     */
+    public int maxSumSubmatrix2(int[][] matrix, int k) {
+        int rows = matrix.length, cols = matrix[0].length, max = Integer.MIN_VALUE;
+        for (int i1 = 1; i1 <= rows; i1++) {
+            for (int j1 = 1; j1 <= cols; j1++) {
+                // renew  // from (i1,j1) to (i2,j2)
+                int[][] dp = new int[rows + 1][cols + 1];
+                dp[i1][j1] = matrix[i1 - 1][j1 - 1];
+                for (int i2 = i1; i2 <= rows; i2++) {
+                    for (int j2 = j1; j2 <= cols; j2++) {
+                        dp[i2][j2] = dp[i2 - 1][j2] + dp[i2][j2 - 1] - dp[i2 - 1][j2 - 1] + matrix[i2 - 1][j2 - 1];
+                        if (dp[i2][j2] <= k && dp[i2][j2] > max) max = dp[i2][j2];
+                    }
+                }
+            }
+        }
+        return max;
+    }
+
 
     public static void main(String[] args) {
         Quetion363 q = new Quetion363();
