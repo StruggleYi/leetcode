@@ -19,14 +19,17 @@ public class Question938 {
      * @return
      */
     public int rangeSumBST(TreeNode root, int low, int high) {
-        if (root == null) return 0;
-        else if (withinRange(low, high, root.val)) {
+        if (root == null) {
+            return 0;
+        } else if (withinRange(low, high, root.val)) {
             return root.val + rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high);
         } else if (root.val > high) {
             return rangeSumBST(root.left, low, high);
         } else if (root.val < low) {
             return rangeSumBST(root.right, low, high);
-        } else return 0;
+        } else {
+            return 0;
+        }
     }
 
     private boolean withinRange(int low, int high, int val) {
