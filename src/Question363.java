@@ -7,7 +7,7 @@
  * https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/
  * level: hard
  **/
-public class Quetion363 {
+public class Question363 {
 
     /**
      * leetCode 借鉴思路
@@ -102,7 +102,7 @@ public class Quetion363 {
 
 
     public static void main(String[] args) {
-        Quetion363 q = new Quetion363();
+        Question363 q = new Question363();
         int[][] arr = {{1, 0, 1}, {0, -2, 3}};
         System.out.println(q.maxSumSubmatrix(arr, 2));
     }
