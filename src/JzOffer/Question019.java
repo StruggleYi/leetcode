@@ -65,19 +65,25 @@ public class Question019 {
             return true;
         }
 
+        // p 匹配完成但是 s 未完成, 无法进行匹配
         if (j == p.length()) {
             return false;
         }
 
         if (i == s.length()) {
+
+            // 如果s 匹配完成, 但是 p 未完成, 可以考虑后面的子串是否可以表示为空串
+            // 如果该位为*, 有两种情况: 1、上一位相等但是不匹配; 2: 上一位只匹配一次, 然后判断后面的子串
             if (p.charAt(j) == '*') {
                 return judge(s, p, i - 1, j + 1, flag) || judge(s, p, i, j + 1, flag);
             }
 
+            // 如果子串剩余的个数为奇数, 一定不能表示空串
             if ((p.length() - j) % 2 == 1) {
                 return false;
             }
 
+            // 子串剩余的个数为偶数, 只有 x* 或者 .* 的情况才能表示空串
             while (j < p.length()) {
                 if (p.charAt(j + 1) == '*') {
                     j += 2;
