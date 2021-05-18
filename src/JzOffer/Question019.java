@@ -49,7 +49,7 @@ public class Question019 {
     }
 
     /**
-     * 暴力做法
+     * 暴力做法, 具体如何剪枝, 后续可以继续思考
      *
      * @param s
      * @param p
@@ -75,7 +75,6 @@ public class Question019 {
             }
 
             if ((p.length() - j) % 2 == 1) {
-                flag[i][j] = 1;
                 return false;
             }
 
@@ -83,7 +82,6 @@ public class Question019 {
                 if (p.charAt(j + 1) == '*') {
                     j += 2;
                 } else {
-                    flag[i][j] = 1;
                     return false;
                 }
             }
@@ -95,6 +93,9 @@ public class Question019 {
             return false;
         }
 
+        // 两个字母相等的情况
+        // p还有下一位时, 如果下一位是*, 有三种情况: 1、这个字母出现0次; 2、这个字母出现1次; 2、这个字母出现多次;
+        // 如果下一位是字母或者*, 均只能跳过
         if (s.charAt(i) == p.charAt(j)) {
             if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
                 return judge(s, p, i + 1, j, flag) || judge(s, p, i, j + 2, flag) || judge(s, p, i + 1, j + 2, flag);
@@ -102,10 +103,15 @@ public class Question019 {
                 return judge(s, p, i + 1, j + 1, flag);
             }
         } else if (p.charAt(j) == '.') {
+            // 两个字母不相等, 且该位是 . , 直接判断下一位
             return judge(s, p, i + 1, j + 1, flag);
         } else if (p.charAt(j) == '*') {
+            // 两个字母不相等, 且该位是 * , 由于字母相等时会判断下一位是*的情况, 所以在此处出现*只有一种情况, 上一位是.
+            // 由于.* 可以代表任意字母, 并且数目也任意
+            // 所以这里可以分三种情况讨论, 上一个. 代表0次意味着s也需要回退一位, 还有就是代表1次和多次的情况
             return judge(s, p, i + 1, j + 1, flag) || judge(s, p, i + 1, j, flag) || judge(s, p, i - 1, j + 1, flag);
         } else if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
+            // 如果这里字母不相等, 且下一位是*, 可以代表此字母出现0次
             return judge(s, p, i, j + 2, flag);
         }
 
