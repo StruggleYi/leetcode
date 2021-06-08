@@ -10,7 +10,7 @@ import java.util.Stack;
  * path: https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/
  * level: easy
  **/
-public class Questiono009 {
+public class Question009 {
 
     Stack<Integer> stack1;
     Stack<Integer> stack2;
