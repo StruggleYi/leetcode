@@ -4,9 +4,9 @@ package LeetCode;
  * @author Struggle
  * @date Created in 2025/4/3 11:23
  * description 有序三元组中的最大值
- * node:
+ * node: 贪心算法 固定中间值即可
  * path:
- * level:
+ * level: medium
  **/
 public class Question2874 {
 
