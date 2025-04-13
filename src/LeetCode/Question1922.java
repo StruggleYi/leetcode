@@ -3,10 +3,9 @@ package LeetCode;
 /**
  * @author Struggle
  * @date Created in 2025/4/13 22:23
- * description
- * node:
- * path:
- * level:
+ * description 统计好数字的个数
+ * node: 其实啥计算一个比较大的数字的次方
+ * level: medium
  **/
 public class Question1922 {
 
